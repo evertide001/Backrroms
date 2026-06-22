@@ -25,9 +25,23 @@ public class ModCreativeModeTabs {
                         output.accept(Modblocks.AREA_0_CARPET);
                         output.accept(Modblocks.AREA_0_CEILING_TILE);
                         output.accept(Modblocks.DAMAGED_AREA_0_CEILING_TILE);
+                        output.accept(Modblocks.DAMAGED_AREA_0_CEILING_TILE_2);
+                        output.accept(Modblocks.DAMAGED_AREA_0_CEILING_TILE_3);
+                        output.accept(Modblocks.EMPTY_AREA_0_CEILING_TILE);
+                        output.accept(Modblocks.FLOOR_CEILING_TILE);
+                        output.accept(Modblocks.FLOOR_CEILING_TILE_STACK);
                         output.accept(Modblocks.WALL_SOCKET);
                         output.accept(Modblocks.CEILING_LIGHT);
+                        output.accept(Modblocks.RED_CEILING_LIGHT);
+                        output.accept(Modblocks.ORANGE_CEILING_LIGHT);
+                        output.accept(Modblocks.YELLOW_CEILING_LIGHT);
+                        output.accept(Modblocks.GREEN_CEILING_LIGHT);
+                        output.accept(Modblocks.TEAL_CEILING_LIGHT);
+                        output.accept(Modblocks.BLUE_CEILING_LIGHT);
+                        output.accept(Modblocks.PURPLE_CEILING_LIGHT);
+                        output.accept(Modblocks.PINK_CEILING_LIGHT);
                         output.accept(Modblocks.LOST_LANTERN);
+                        output.accept(Modblocks.BOMB_FROM_ANGER_BIRD);
                     })
                     .build());
 

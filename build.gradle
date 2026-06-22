@@ -28,6 +28,12 @@ sourceSets.main.resources {
 
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
+
+    // Repository for the Veil API / Advanced Rendering Library
+    maven {
+        name = "BlameJared Maven"
+        url = "https://maven.blamejared.com/"
+    }
 }
 
 base {
@@ -94,7 +100,7 @@ neoForge {
 
             // Recommended logging level for the console
             // You can set various levels here.
-            // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
+            // Please read: https://stackoverflow.com
             logLevel = org.slf4j.event.Level.DEBUG
         }
     }
@@ -136,9 +142,11 @@ dependencies {
     // Example project dependency using a sister or child project:
     // implementation project(":myproject")
 
+    // Source: https://mvnrepository.com/artifact/foundry.veil/veil-neoforge-1.21.1
+    implementation("foundry.veil:veil-neoforge-${project.minecraft_version}:${project.veil_version}")
     // For more info:
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    // http://gradle.org
+    // http://gradle.org
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
