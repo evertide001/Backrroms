@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(Moditems.PRISMATIC);
                         output.accept(Modblocks.AREA_0_WALLPAPER);
+                        output.accept(Modblocks.AREA_0_WALLPAPER_BLANK);
                         output.accept(Modblocks.AREA_0_CARPET);
                         output.accept(Modblocks.AREA_0_CEILING_TILE);
                         output.accept(Modblocks.DAMAGED_AREA_0_CEILING_TILE);
@@ -40,6 +41,7 @@ public class ModCreativeModeTabs {
                         output.accept(Modblocks.BLUE_CEILING_LIGHT);
                         output.accept(Modblocks.PURPLE_CEILING_LIGHT);
                         output.accept(Modblocks.PINK_CEILING_LIGHT);
+                        output.accept(Modblocks.WHITE_CEILING_LIGHT);
                         output.accept(Modblocks.LOST_LANTERN);
                         output.accept(Modblocks.BOMB_FROM_ANGER_BIRD);
                     })

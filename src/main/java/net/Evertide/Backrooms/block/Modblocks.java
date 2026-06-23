@@ -37,6 +37,11 @@ public class Modblocks {
                     .strength(99999999f)
                     .sound(SoundType.BAMBOO_WOOD)));
 
+    public static final DeferredBlock<Block> AREA_0_WALLPAPER_BLANK = registerBlock("area_0_wallpaper_blank",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .sound(SoundType.BAMBOO_WOOD)));
+
     public static final DeferredBlock<Block> AREA_0_CARPET = registerBlock("area_0_carpet",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
@@ -71,13 +76,11 @@ public class Modblocks {
     public static final DeferredBlock<Block> FLOOR_CEILING_TILE = registerBlock("floor_ceiling_tile",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
+                    .noOcclusion()
                     .sound(SoundType.FUNGUS)) {
                 @Override
                 public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
                     return TILE_SHAPE;
-                }
-                public boolean isOcclusion(BlockState state) {
-                    return false;
                 }
 
                 @Override
@@ -90,13 +93,11 @@ public class Modblocks {
     public static final DeferredBlock<Block> FLOOR_CEILING_TILE_STACK = registerBlock("floor_ceiling_tile_stack",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
+                    .noOcclusion()
                     .sound(SoundType.FUNGUS)) {
                 @Override
                 public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
                     return STACK_SHAPE;
-                }
-                public boolean isOcclusion(BlockState state) {
-                    return false;
                 }
 
                 @Override
@@ -133,123 +134,126 @@ public class Modblocks {
     public static final DeferredBlock<Block> CEILING_LIGHT = registerBlock("ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
+                    .noOcclusion()
                     .lightLevel(state -> 15)
                     .sound(SoundType.GLASS)) {
-                public boolean isOcclusion(BlockState state) {
-                    return false;
-                }
 
                 @Override
                 public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
                     return Shapes.empty();
                 }
             });
+
+    public static final DeferredBlock<Block> WHITE_CEILING_LIGHT = registerBlock("white_ceiling_light",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .noOcclusion()
+                    .lightLevel(state -> 15)
+                    .sound(SoundType.GLASS)) {
+
+                @Override
+                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
+                    return Shapes.empty();
+                }
+            });
+
     public static final DeferredBlock<Block> RED_CEILING_LIGHT = registerBlock("red_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
+                    .noOcclusion()
                     .lightLevel(state -> 15)
                     .sound(SoundType.GLASS)) {
-                public boolean isOcclusion(BlockState state) {
-                    return false;
-                }
 
                 @Override
                 public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
                     return Shapes.empty();
                 }
             });
+
        public static final DeferredBlock<Block> ORANGE_CEILING_LIGHT = registerBlock("orange_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
+                    .noOcclusion()
                     .lightLevel(state -> 15)
                     .sound(SoundType.GLASS)) {
-                public boolean isOcclusion(BlockState state) {
-                    return false;
-                }
 
                 @Override
                 public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
                     return Shapes.empty();
                 }
             });
+
     public static final DeferredBlock<Block> YELLOW_CEILING_LIGHT = registerBlock("yellow_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
+                    .noOcclusion()
                     .lightLevel(state -> 15)
                     .sound(SoundType.GLASS)) {
-                public boolean isOcclusion(BlockState state) {
-                    return false;
-                }
 
                 @Override
                 public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
                     return Shapes.empty();
                 }
             });
+
     public static final DeferredBlock<Block> GREEN_CEILING_LIGHT = registerBlock("green_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
+                    .noOcclusion()
                     .lightLevel(state -> 15)
                     .sound(SoundType.GLASS)) {
-                public boolean isOcclusion(BlockState state) {
-                    return false;
-                }
 
                 @Override
                 public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
                     return Shapes.empty();
                 }
             });
+
     public static final DeferredBlock<Block> TEAL_CEILING_LIGHT = registerBlock("teal_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
+                    .noOcclusion()
                     .lightLevel(state -> 15)
                     .sound(SoundType.GLASS)) {
-                public boolean isOcclusion(BlockState state) {
-                    return false;
-                }
 
                 @Override
                 public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
                     return Shapes.empty();
                 }
             });
+
     public static final DeferredBlock<Block> BLUE_CEILING_LIGHT = registerBlock("blue_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
+                    .noOcclusion()
                     .lightLevel(state -> 15)
                     .sound(SoundType.GLASS)) {
-                public boolean isOcclusion(BlockState state) {
-                    return false;
-                }
 
                 @Override
                 public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
                     return Shapes.empty();
                 }
             });
+
     public static final DeferredBlock<Block> PURPLE_CEILING_LIGHT = registerBlock("purple_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
+                    .noOcclusion()
                     .lightLevel(state -> 15)
                     .sound(SoundType.GLASS)) {
-                public boolean isOcclusion(BlockState state) {
-                    return false;
-                }
 
                 @Override
                 public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
                     return Shapes.empty();
                 }
             });
+
     public static final DeferredBlock<Block> PINK_CEILING_LIGHT = registerBlock("pink_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
+                    .noOcclusion()
                     .lightLevel(state -> 15)
                     .sound(SoundType.GLASS)) {
-                public boolean isOcclusion(BlockState state) {
-                    return false;
-                }
 
                 @Override
                 public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {

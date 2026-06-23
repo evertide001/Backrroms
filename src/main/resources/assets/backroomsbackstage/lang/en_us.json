@@ -2,6 +2,7 @@
  "item.backroomsbackstage.prismatic": "Prismatica",
 
  "block.backroomsbackstage.area_0_wallpaper": "Area 0 Wallpaper",
+ "block.backroomsbackstage.area_0_wallpaper_blank": "Area 0 Blank Wallpaper",
  "block.backroomsbackstage.area_0_carpet": "Area 0 Carpet",
  "block.backroomsbackstage.area_0_ceiling_tile": "Area 0 Ceiling Tile",
  "block.backroomsbackstage.ceiling_light": "Ceiling Light",
@@ -13,6 +14,7 @@
  "block.backroomsbackstage.blue_ceiling_light": "Blue Ceiling Light",
  "block.backroomsbackstage.purple_ceiling_light": "Purple Ceiling Light",
  "block.backroomsbackstage.pink_ceiling_light": "Pink Ceiling Light",
+ "block.backroomsbackstage.white_ceiling_light": "White Ceiling Light",
  "block.backroomsbackstage.wall_socket": "Wall Socket",
  "block.backroomsbackstage.lost_lantern": "Lost Lantern",
  "block.backroomsbackstage.damaged_area_0_ceiling_tile": "Damaged Area 0 Ceiling Tile",
