@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "backroomsbackstage:blocks/wall_socket",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "backroomsbackstage:blocks/wall_socket"
+    },
+    "facing=south": {
+      "model": "backroomsbackstage:blocks/wall_socket",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "backroomsbackstage:blocks/wall_socket",
+      "y": 270
+    }
+  }
+}

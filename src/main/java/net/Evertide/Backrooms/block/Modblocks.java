@@ -7,6 +7,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -25,26 +26,135 @@ public class Modblocks {
             DeferredRegister.createBlocks(BackroomsBackstage.MODID);
 
     // --- Custom Shapes (Defined in pixels: MinX, MinY, MinZ, MaxX, MaxY, MaxZ) ---
-    // A thin tile flat on the floor (1 pixel tall)
     private static final VoxelShape TILE_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
-    // A stack of tiles (4 pixels tall)
     private static final VoxelShape STACK_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D);
-    // A small lantern shape sitting in the middle of the block
     private static final VoxelShape LANTERN_SHAPE = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 9.0D, 11.0D);
+    private static final VoxelShape BOX_REPLACE = Block.box(0.00, 0.00, 0.00, 16.00, 16.00, 16.00);
 
     public static final DeferredBlock<Block> AREA_0_WALLPAPER = registerBlock("area_0_wallpaper",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .sound(SoundType.BAMBOO_WOOD)));
 
+    public static final DeferredBlock<Block> AREA_0_ERRORED_WALLPAPER = registerBlock("area_0_errored_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .noCollission()
+                    .noOcclusion()
+                    .sound(SoundType.BAMBOO_WOOD)));
+
+    public static final DeferredBlock<Block> AREA_0_SIDED_WALLPAPER = registerBlock("area_0_sided_wallpaper",
+            () -> new DirectionalPassageBlock(
+                    BlockBehaviour.Properties.of()
+                            .strength(999999999f)
+                            .sound(SoundType.BAMBOO_WOOD),
+                    (level, pos) -> true
+            )
+            {
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+                    return BOX_REPLACE;
+                }
+            }
+
+    );
     public static final DeferredBlock<Block> AREA_0_WALLPAPER_BLANK = registerBlock("area_0_wallpaper_blank",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .sound(SoundType.BAMBOO_WOOD)));
 
+    public static final DeferredBlock<Block> RED_WALLPAPER = registerBlock("red_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .sound(SoundType.BAMBOO_WOOD)));
+
+    public static final DeferredBlock<Block> MANILLA_WALLPAPER = registerBlock("manilla_wallpaper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .sound(SoundType.BAMBOO_WOOD)));
+
+    public static final DeferredBlock<Block> AREA_0_WALLPAPER_STRIPED = registerBlock("area_0_wallpaper_striped",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .sound(SoundType.BAMBOO_WOOD)));
+
+    public static final DeferredBlock<Block> AREA_0_WALLPAPER_DOUBLE_STRIPED = registerBlock("area_0_wallpaper_double_striped",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .sound(SoundType.BAMBOO_WOOD)));
+
+    public static final DeferredBlock<Block> AREA_0_WALLPAPER_SPECKLE = registerBlock("area_0_wallpaper_speckle",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .sound(SoundType.BAMBOO_WOOD)));
+
+    public static final DeferredBlock<Block> AREA_0_WALLPAPER_WOBBLY = registerBlock("area_0_wallpaper_wobbly",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .sound(SoundType.BAMBOO_WOOD)));
+
+    public static final DeferredBlock<Block> DECONSTRUCTED = registerBlock("deconstructed",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .lightLevel(state -> 1)
+                    .sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> CONSTRUCTED = registerBlock("constructed",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .lightLevel(state -> 1)
+                    .sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> VOID = registerBlock("void",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .lightLevel(state -> 1)
+                    .sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> FAKE_CLOUD = registerBlock("fake_cloud",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .lightLevel(state -> 15)
+                    .sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> FAKE_SKY = registerBlock("fake_sky",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .lightLevel(state -> 15)
+                    .sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> FAKE_WHITE_SUN = registerBlock("fake_white_sun",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .lightLevel(state -> 15)
+                    .sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> FAKE_YELLOW_SUN = registerBlock("fake_yellow_sun",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .lightLevel(state -> 15)
+                    .sound(SoundType.AMETHYST)));
+
     public static final DeferredBlock<Block> AREA_0_CARPET = registerBlock("area_0_carpet",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
+                    .sound(SoundType.WOOL)));
+
+    public static final DeferredBlock<Block> RED_CARPET = registerBlock("red_carpet",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .sound(SoundType.WOOL)));
+
+    public static final DeferredBlock<Block> AREA_0_SOGGY_CARPET = registerBlock("area_0_soggy_carpet",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .sound(SoundType.WET_SPONGE)));
+
+    public static final DeferredBlock<Block> AREA_0_ERRORED_CARPET = registerBlock("area_0_errored_carpet",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .noCollission()
+                    .noOcclusion()
                     .sound(SoundType.WOOL)));
 
     public static final DeferredBlock<Block> AREA_0_CEILING_TILE = registerBlock("area_0_ceiling_tile",
@@ -83,11 +193,6 @@ public class Modblocks {
                     return TILE_SHAPE;
                 }
 
-                @Override
-                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
-                    return Shapes.empty();
-                }
-
             });
 
     public static final DeferredBlock<Block> FLOOR_CEILING_TILE_STACK = registerBlock("floor_ceiling_tile_stack",
@@ -98,11 +203,6 @@ public class Modblocks {
                 @Override
                 public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
                     return STACK_SHAPE;
-                }
-
-                @Override
-                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
-                    return Shapes.empty();
                 }
             });
 
@@ -136,130 +236,71 @@ public class Modblocks {
                     .strength(99999999f)
                     .noOcclusion()
                     .lightLevel(state -> 15)
-                    .sound(SoundType.GLASS)) {
-
-                @Override
-                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
-                    return Shapes.empty();
-                }
-            });
+                    .sound(SoundType.GLASS))
+            );
 
     public static final DeferredBlock<Block> WHITE_CEILING_LIGHT = registerBlock("white_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .noOcclusion()
                     .lightLevel(state -> 15)
-                    .sound(SoundType.GLASS)) {
-
-                @Override
-                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
-                    return Shapes.empty();
-                }
-            });
+                    .sound(SoundType.GLASS)));
 
     public static final DeferredBlock<Block> RED_CEILING_LIGHT = registerBlock("red_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .noOcclusion()
                     .lightLevel(state -> 15)
-                    .sound(SoundType.GLASS)) {
-
-                @Override
-                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
-                    return Shapes.empty();
-                }
-            });
+                    .sound(SoundType.GLASS)));
 
        public static final DeferredBlock<Block> ORANGE_CEILING_LIGHT = registerBlock("orange_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .noOcclusion()
                     .lightLevel(state -> 15)
-                    .sound(SoundType.GLASS)) {
-
-                @Override
-                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
-                    return Shapes.empty();
-                }
-            });
+                    .sound(SoundType.GLASS)));
 
     public static final DeferredBlock<Block> YELLOW_CEILING_LIGHT = registerBlock("yellow_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .noOcclusion()
                     .lightLevel(state -> 15)
-                    .sound(SoundType.GLASS)) {
-
-                @Override
-                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
-                    return Shapes.empty();
-                }
-            });
+                    .sound(SoundType.GLASS)));
 
     public static final DeferredBlock<Block> GREEN_CEILING_LIGHT = registerBlock("green_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .noOcclusion()
                     .lightLevel(state -> 15)
-                    .sound(SoundType.GLASS)) {
-
-                @Override
-                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
-                    return Shapes.empty();
-                }
-            });
+                    .sound(SoundType.GLASS)));
 
     public static final DeferredBlock<Block> TEAL_CEILING_LIGHT = registerBlock("teal_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .noOcclusion()
                     .lightLevel(state -> 15)
-                    .sound(SoundType.GLASS)) {
-
-                @Override
-                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
-                    return Shapes.empty();
-                }
-            });
+                    .sound(SoundType.GLASS)));
 
     public static final DeferredBlock<Block> BLUE_CEILING_LIGHT = registerBlock("blue_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .noOcclusion()
                     .lightLevel(state -> 15)
-                    .sound(SoundType.GLASS)) {
-
-                @Override
-                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
-                    return Shapes.empty();
-                }
-            });
+                    .sound(SoundType.GLASS)));
 
     public static final DeferredBlock<Block> PURPLE_CEILING_LIGHT = registerBlock("purple_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .noOcclusion()
                     .lightLevel(state -> 15)
-                    .sound(SoundType.GLASS)) {
-
-                @Override
-                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
-                    return Shapes.empty();
-                }
-            });
+                    .sound(SoundType.GLASS)));
 
     public static final DeferredBlock<Block> PINK_CEILING_LIGHT = registerBlock("pink_ceiling_light",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .noOcclusion()
                     .lightLevel(state -> 15)
-                    .sound(SoundType.GLASS)) {
-
-                @Override
-                public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
-                    return Shapes.empty();
-                }
-            });
+                    .sound(SoundType.GLASS)));
 
     public static final DeferredBlock<Block> WALL_SOCKET = registerBlock("wall_socket",
             () -> new Moddirectionalblocks(BlockBehaviour.Properties.of()

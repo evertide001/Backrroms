@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "backroomsbackstage:bomb_from_anger_bird"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "backroomsbackstage:blocks/bomb_from_anger_bird"
+}

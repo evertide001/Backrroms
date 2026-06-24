@@ -2,6 +2,8 @@
  "item.backroomsbackstage.prismatic": "Prismatica",
 
  "block.backroomsbackstage.area_0_wallpaper": "Area 0 Wallpaper",
+ "block.backroomsbackstage.area_0_errored_wallpaper": "Area 0 Errored Wallpaper",
+ "block.backroomsbackstage.area_0_sided_wallpaper": "Area 0 One Sided Wallpaper",
  "block.backroomsbackstage.area_0_wallpaper_blank": "Area 0 Blank Wallpaper",
  "block.backroomsbackstage.area_0_carpet": "Area 0 Carpet",
  "block.backroomsbackstage.area_0_ceiling_tile": "Area 0 Ceiling Tile",

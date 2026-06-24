@@ -23,7 +23,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class Moddirectionalblocks extends BaseEntityBlock {
+public class Moddirectionalblocks extends HorizontalDirectionalBlock {
     public static final DirectionProperty FACING;
     public static final MapCodec<Moddirectionalblocks> CODEC = simpleCodec(Moddirectionalblocks::new);
 
@@ -52,7 +52,7 @@ public class Moddirectionalblocks extends BaseEntityBlock {
     }
 
     @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
+    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
         return CODEC;
     }
 
@@ -92,7 +92,6 @@ public class Moddirectionalblocks extends BaseEntityBlock {
     }
 
     @Nullable
-    @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return null;
     }
