@@ -7,17 +7,19 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public class Modblocks {
@@ -25,7 +27,7 @@ public class Modblocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(BackroomsBackstage.MODID);
 
-    // --- Custom Shapes (Defined in pixels: MinX, MinY, MinZ, MaxX, MaxY, MaxZ) ---
+    // MinX, MinY, MinZ, MaxX, MaxY, MaxZ)
     private static final VoxelShape TILE_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
     private static final VoxelShape STACK_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D);
     private static final VoxelShape LANTERN_SHAPE = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 9.0D, 11.0D);
@@ -52,16 +54,68 @@ public class Modblocks {
             )
             {
                 @Override
-                public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+                public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable( "tooltip.backroomsbackstage.one_sided.tooltip"));
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+
+                    @Override
+                    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
                     return BOX_REPLACE;
                 }
             }
+
 
     );
     public static final DeferredBlock<Block> AREA_0_WALLPAPER_BLANK = registerBlock("area_0_wallpaper_blank",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .sound(SoundType.BAMBOO_WOOD)));
+
+    public static final DeferredBlock<Block> BUDDING_FIRE_SALT = registerBlock("budding_fire_salt",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .lightLevel(state -> 5)
+                    .sound(SoundType.AMETHYST_CLUSTER)));
+
+    public static final DeferredBlock<Block> BLOCK_OF_FIRE_SALT = registerBlock("block_of_fire_salt",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .lightLevel(state -> 5)
+                    .sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> FIRE_SALT_BUD = registerBlock("fire_salt_bud",
+            () -> new Modalldirectionalblocks(BlockBehaviour.Properties.of()
+                    .strength(1f)
+                    .lightLevel(state -> 5)
+                    .noOcclusion()
+                    .noCollission()
+                    .sound(SoundType.LARGE_AMETHYST_BUD)){
+
+            });
+
+    public static final DeferredBlock<Block> CARPET_GRASS = registerBlock("carpet_grass",
+            () -> new ModfoligeBlock(
+                    BlockBehaviour.Properties.of()
+                            .strength(0f)
+                            .instabreak()
+                            .noOcclusion()
+                            .noCollission()
+                            .sound(SoundType.WOOL),
+                    Modblocks.AREA_0_CARPET
+            )
+    );
+
+    public static final DeferredBlock<Block> BURNSTONE = registerBlock("burnstone",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .sound(SoundType.BASALT)));
+
+    public static final DeferredBlock<Block> CONCRETE = registerBlock("concrete",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(99999999f)
+                    .sound(SoundType.DEEPSLATE_BRICKS)));
+
 
     public static final DeferredBlock<Block> RED_WALLPAPER = registerBlock("red_wallpaper",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -96,19 +150,19 @@ public class Modblocks {
     public static final DeferredBlock<Block> DECONSTRUCTED = registerBlock("deconstructed",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
-                    .lightLevel(state -> 1)
+                    .lightLevel(state -> 7)
                     .sound(SoundType.AMETHYST)));
 
     public static final DeferredBlock<Block> CONSTRUCTED = registerBlock("constructed",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
-                    .lightLevel(state -> 1)
+                    .lightLevel(state -> 7)
                     .sound(SoundType.AMETHYST)));
 
     public static final DeferredBlock<Block> VOID = registerBlock("void",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(99999999f)
-                    .lightLevel(state -> 1)
+                    .lightLevel(state -> 2)
                     .sound(SoundType.AMETHYST)));
 
     public static final DeferredBlock<Block> FAKE_CLOUD = registerBlock("fake_cloud",
@@ -303,7 +357,7 @@ public class Modblocks {
                     .sound(SoundType.GLASS)));
 
     public static final DeferredBlock<Block> WALL_SOCKET = registerBlock("wall_socket",
-            () -> new Moddirectionalblocks(BlockBehaviour.Properties.of()
+            () -> new Modalldirectionalblocks(BlockBehaviour.Properties.of()
                     .strength(99999999f)
                     .sound(SoundType.LANTERN)
                     .dynamicShape()

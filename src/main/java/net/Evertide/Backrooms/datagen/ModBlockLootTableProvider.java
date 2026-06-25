@@ -1,6 +1,7 @@
 package net.Evertide.Backrooms.datagen;
 
 import net.Evertide.Backrooms.block.Modblocks;
+import net.Evertide.Backrooms.items.Moditems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -66,12 +67,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(Modblocks.AREA_0_WALLPAPER_STRIPED.get());
         dropSelf(Modblocks.AREA_0_WALLPAPER_SPECKLE.get());
         dropSelf(Modblocks.AREA_0_SOGGY_CARPET.get());
-
+        dropSelf(Modblocks.BLOCK_OF_FIRE_SALT.get());
+        dropSelf(Modblocks.BUDDING_FIRE_SALT.get());
+        dropSelf(Modblocks.BURNSTONE.get());
+        dropSelf(Modblocks.CONCRETE.get());
+        this.add(Modblocks.CARPET_GRASS.get(), LootTable.lootTable());
+        add(Modblocks.FIRE_SALT_BUD.get(),
+        block-> createMultipleOreDrops(Modblocks.FIRE_SALT_BUD.get(), Moditems.FIRE_SALT.get(), 1,8));
         //add(ModBlocks.BISMUTH_ORE.get(),
         //  block -> createOreDrop(ModBlocks.BISMUTH_ORE.get(), ModItems.RAW_BISMUTH.get()));
-        //add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get(),
-        // block -> createMultipleOreDrops(ModBlocks.BISMUTH_DEEPSLATE_ORE.get(), ModItems.RAW_BISMUTH.get(), 2, 5));
-
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

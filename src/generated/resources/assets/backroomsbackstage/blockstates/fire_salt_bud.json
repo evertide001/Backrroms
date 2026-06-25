@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "backroomsbackstage:blocks/fire_salt_bud",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "backroomsbackstage:blocks/fire_salt_bud",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "backroomsbackstage:blocks/fire_salt_bud"
+    },
+    "facing=south": {
+      "model": "backroomsbackstage:blocks/fire_salt_bud",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "backroomsbackstage:blocks/fire_salt_bud",
+      "x": -90
+    },
+    "facing=west": {
+      "model": "backroomsbackstage:blocks/fire_salt_bud",
+      "y": 270
+    }
+  }
+}

@@ -14,5 +14,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(Moditems.PRISMATIC.get());
+        basicItem(Moditems.FIRE_SALT.get());
     }
 }

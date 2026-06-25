@@ -25,8 +25,16 @@ public class ModCreativeModeTabs {
                         output.accept(Modblocks.AREA_0_ERRORED_WALLPAPER);
                         output.accept(Modblocks.AREA_0_SIDED_WALLPAPER);
                         output.accept(Modblocks.AREA_0_WALLPAPER_BLANK);
+                        output.accept(Modblocks.AREA_0_WALLPAPER_DOUBLE_STRIPED);
+                        output.accept(Modblocks.AREA_0_WALLPAPER_SPECKLE);
+                        output.accept(Modblocks.AREA_0_WALLPAPER_STRIPED);
+                        output.accept(Modblocks.AREA_0_WALLPAPER_WOBBLY);
+                        output.accept(Modblocks.RED_WALLPAPER);
+                        output.accept(Modblocks.MANILLA_WALLPAPER);
                         output.accept(Modblocks.AREA_0_CARPET);
+                        output.accept(Modblocks.AREA_0_SOGGY_CARPET);
                         output.accept(Modblocks.AREA_0_ERRORED_CARPET);
+                        output.accept(Modblocks.RED_CARPET);
                         output.accept(Modblocks.AREA_0_CEILING_TILE);
                         output.accept(Modblocks.DAMAGED_AREA_0_CEILING_TILE);
                         output.accept(Modblocks.DAMAGED_AREA_0_CEILING_TILE_2);
@@ -46,22 +54,20 @@ public class ModCreativeModeTabs {
                         output.accept(Modblocks.PINK_CEILING_LIGHT);
                         output.accept(Modblocks.WHITE_CEILING_LIGHT);
                         output.accept(Modblocks.LOST_LANTERN);
+                        output.accept(Modblocks.BURNSTONE);
+                        output.accept(Modblocks.BLOCK_OF_FIRE_SALT);
+                        output.accept(Modblocks.BUDDING_FIRE_SALT);
+                        output.accept(Modblocks.FIRE_SALT_BUD);
+                        output.accept(Moditems.FIRE_SALT);
+                        output.accept(Modblocks.CARPET_GRASS);
                         output.accept(Modblocks.BOMB_FROM_ANGER_BIRD);
-                        output.accept(Modblocks.AREA_0_SOGGY_CARPET);
-                        output.accept(Modblocks.AREA_0_WALLPAPER_DOUBLE_STRIPED);
-                        output.accept(Modblocks.AREA_0_WALLPAPER_SPECKLE);
-                        output.accept(Modblocks.AREA_0_WALLPAPER_STRIPED);
-                        output.accept(Modblocks.AREA_0_WALLPAPER_WOBBLY);
                         output.accept(Modblocks.CONSTRUCTED);
                         output.accept(Modblocks.DECONSTRUCTED);
                         output.accept(Modblocks.FAKE_CLOUD);
                         output.accept(Modblocks.FAKE_SKY);
-                        output.accept(Modblocks.VOID);
                         output.accept(Modblocks.FAKE_WHITE_SUN);
                         output.accept(Modblocks.FAKE_YELLOW_SUN);
-                        output.accept(Modblocks.RED_CARPET);
-                        output.accept(Modblocks.RED_WALLPAPER);
-                        output.accept(Modblocks.MANILLA_WALLPAPER);
+                        output.accept(Modblocks.VOID);
                     })
                     .build());
 

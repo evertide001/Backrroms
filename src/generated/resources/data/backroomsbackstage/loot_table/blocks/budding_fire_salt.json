@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "backroomsbackstage:budding_fire_salt"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "backroomsbackstage:blocks/budding_fire_salt"
+}

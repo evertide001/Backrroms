@@ -1,10 +1,31 @@
 {
  "item.backroomsbackstage.prismatic": "Prismatica",
+ "item.backroomsbackstage.fire_salt": "Fire Salt",
 
  "block.backroomsbackstage.area_0_wallpaper": "Area 0 Wallpaper",
  "block.backroomsbackstage.area_0_errored_wallpaper": "Area 0 Errored Wallpaper",
  "block.backroomsbackstage.area_0_sided_wallpaper": "Area 0 One Sided Wallpaper",
  "block.backroomsbackstage.area_0_wallpaper_blank": "Area 0 Blank Wallpaper",
+ "block.backroomsbackstage.area_0_wallpaper_double_striped": "Area 0 Double Striped Wallpaper",
+ "block.backroomsbackstage.area_0_wallpaper_striped": "Area 0 Striped Wallpaper",
+ "block.backroomsbackstage.area_0_wallpaper_speckle": "Area 0 Speckled Wallpaper",
+ "block.backroomsbackstage.area_0_wallpaper_wobbly": "Area 0 Wobbly Wallpaper",
+ "block.backroomsbackstage.manilla_wallpaper": "Manila Wallpaper",
+ "block.backroomsbackstage.red_wallpaper": "Red Wallpaper",
+ "block.backroomsbackstage.red_carpet": "Red Carpet",
+ "block.backroomsbackstage.block_of_fire_salt": "Block of Fire Salt",
+ "block.backroomsbackstage.burnstone": "Burnstone",
+ "block.backroomsbackstage.carpet_grass": "Carpet Grass",
+ "block.backroomsbackstage.concrete": "Concrete",
+ "block.backroomsbackstage.budding_fire_salt": "Budding Fire Salt",
+ "block.backroomsbackstage.fire_salt_bud": "Fire Salt Bud",
+ "block.backroomsbackstage.fake_cloud": "Fake Cloud",
+ "block.backroomsbackstage.fake_sky": "Fake Sky",
+ "block.backroomsbackstage.fake_white_sun": "Fake White Sun",
+ "block.backroomsbackstage.fake_yellow_sun": "Fake Yellow Sun",
+ "block.backroomsbackstage.deconstructed": "Deconstructed",
+ "block.backroomsbackstage.constructed": "Constructed",
+ "block.backroomsbackstage.void": "Void",
  "block.backroomsbackstage.area_0_carpet": "Area 0 Carpet",
  "block.backroomsbackstage.area_0_ceiling_tile": "Area 0 Ceiling Tile",
  "block.backroomsbackstage.ceiling_light": "Ceiling Light",
@@ -26,5 +47,8 @@
  "block.backroomsbackstage.floor_ceiling_tile": "Floor Ceiling Tile",
  "block.backroomsbackstage.floor_ceiling_tile_stack": "Floor Ceiling Tile Stack",
  "block.backroomsbackstage.bomb_from_anger_bird": "The Explosive God of Destruction of 1859, Other wise know as the bomb from anger birds, known from the quote I eat dirt",
- "creativetab.backroomsbackstage.backrooms_backstage_items_tab": "Backrooms: Backstage of Reality"
+ "creativetab.backroomsbackstage.backrooms_backstage_items_tab": "Backrooms: Backstage of Reality",
+
+ "tooltip.backroomsbackstage.fire_salt.tooltip": "§cFire salt§r can be used for weapons and as fuel!",
+ "tooltip.backroomsbackstage.one_sided.tooltip": "This item is §l§4broken§r, DO NOT PLACE IT ON YOU or you will §l§4crash§r, place it at least 2 blocks away"
 }
